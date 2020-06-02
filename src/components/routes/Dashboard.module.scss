@@ -1,0 +1,145 @@
+@import "../../style//variables.scss";
+
+.max_page_width {
+    height: 100vh;
+    background: linear-gradient(to right, #f5f7fa 50%, #e6e9ed 50%);
+
+    .page {
+        height: 750px;
+        .animation_hero {
+            position: absolute;
+            top: 20%;
+            right: 15%;
+        }
+        .menu_container {
+            padding-top: 110px;
+            border: 10px solid transparent;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .hamburger_menu_container {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .menu_icon {
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px;
+            background: white;
+            padding: 9px;
+            border: 1px solid white;
+            text-align: center;
+        }
+    }
+
+    .section_front_panel {
+        padding: 60px 0;
+        background: white;
+        height: 500px;
+        .icon_container {
+            .icons {
+                width: 1440px;
+                margin: 0 auto;
+                display: block;
+                .container {
+                    display: flex;
+                    align-items: stretch;
+                    margin-bottom: 90px;
+                    .icon_list_item {
+                        flex-basis: 33%;
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        position: relative;
+                        .icon_list_item_content {
+                            display: block;
+                            .icon_mix {
+                                display: flex;
+                                justify-content: center;
+                            }
+                            h4 {
+                                text-align: center;
+                                font-size: 1.5rem;
+                                letter-spacing: 0.6px;
+                                margin: 24px 0;
+                            }
+                            p {
+                                margin: 0 auto;
+                                width: 220px;
+                                word-wrap: nowrap;
+                                line-height: 1.5;
+                            }
+                        }
+                    }
+                    .icon_list_item:nth-child(-n + 2)::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 2px;
+                        height: 90%;
+                        background: #d5dce8;
+                        transform: translateX(50%);
+                    }
+                }
+            }
+        }
+    }
+    .news_section {
+        background: #ffffff;
+        padding: 20px 0;
+        .news_container {
+            max-width: 1440px;
+            margin: 0 auto;
+            .articles {
+                display: flex;
+                justify-content: space-evenly;
+                overflow: hidden;
+                article {
+                    width: 150px;
+                    height: 250px;
+                    overflow: hidden;
+                }
+                p {
+                    font-size: 1em;
+                    color: #4b5974;
+                    letter-spacing: 0.025em;
+                    line-height: 1.36;
+                    margin: 0;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .footer {
+        background: #e6e9ed;
+        position: relative;
+        height: 600px;
+        .footer_container {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            .links_container {
+                margin: auto 0;
+                a{
+                    margin: 0 25px 0 0;
+                    font-size: 1.75rem;
+                    font-weight: 500;
+                }
+            }
+        }
+        .footer_link {
+            .arrow_icon {
+                position: absolute;
+                border-radius: 50%;
+                padding: 10px;
+                background: dimgray;
+                top: 500px;
+                right: 75px;
+            }
+        }
+    }
+}

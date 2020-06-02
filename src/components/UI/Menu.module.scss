@@ -1,0 +1,48 @@
+@import "../../style/_variables.scss";
+
+.page {
+    width: 500px;
+    height: 320px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    animation: createMenu 1.25s;
+
+    @keyframes createMenu {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+    .header {
+        span {
+            font-size: 1.75rem;
+            margin: auto 0;
+        }
+        .header_links_container {
+            position: relative;
+            height: 400px;
+            display: flex;
+            flex-flow: column;
+            span {
+                margin: 22px auto 0 auto;
+                font-size: 1.5rem;
+                letter-spacing: 0.4px;
+                border: 10px solid transparent;
+                font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            }
+            span:hover {
+                background: red;
+                padding: 9px;
+                border: 1px solid;
+                border-radius: 3px solid;
+                -webkit-box-shadow: -8px -2px 36px -1px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: -8px -2px 36px -1px rgba(0, 0, 0, 0.75);
+                box-shadow: -8px -2px 36px -1px rgba(0, 0, 0, 0.75);
+                cursor: pointer;
+            }
+        }
+    }
+}
