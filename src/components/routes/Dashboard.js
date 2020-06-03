@@ -6,7 +6,7 @@ import Logo from "../../media/icons/logo.png";
 import Icon from "../../media/icons/icon.svg";
 import Icon2 from "../../media/icons/icon2.svg";
 import Icon3 from "../../media/icons/icon3.svg";
-import ArrowUpIcon from "../../media/icons/up-arrow.svg";
+import ArrowUpIcon from "../../media/icons/up-arrows.svg";
 import { Menu } from "../UI/Menu";
 import HeaderAnimation from "../../components/UI/Animation/HeaderAnimation";
 
@@ -159,26 +159,40 @@ export const Dashboard = () => {
           </div>
         </div>
       </section>
-      <footer id="footer" className={classes.footer}>
-        <div className={classes.footer_container}>
-          <h2>Sentry Network</h2>
-          <div className={classes.links_container}>
-            <a>Contact</a>
-            <a>FAQ</a>
-            <a>Developers</a>
-            <a>Careers</a>
+      <section className={classes.footer_section}>
+        <footer id="footer" className={classes.footer}>
+          <section>
+            <div className={classes.newsletter_container}>
+              <h1>Newsletter</h1>
+              <p>Sign up for new updates from Sentry Network here :</p>
+              <p>Sign up </p>
+            </div>
+            <div className={classes.footer_separator}>
+              <div>
+                <hr className={classes.line} />
+              </div>
+            </div>
+          </section>
+          <div className={classes.footer_container}>
+            <h2>Sentry Network</h2>
+            <div className={classes.links_container}>
+              <a>Contact</a>
+              <a>FAQ</a>
+              <a>Developers</a>
+              <a>Careers</a>
+            </div>
           </div>
-        </div>
-        <a href="#header" className={classes.footer_link}>
-          <img
-            className={classes.arrow_icon}
-            src={ArrowUpIcon}
-            height="32px"
-            width="32px"
-            alt="menu"
-          />
-        </a>
-      </footer>
+          <a href="#header" className={classes.footer_link}>
+            <img
+              className={classes.arrow_icon}
+              src={ArrowUpIcon}
+              height="32px"
+              width="32px"
+              alt="menu"
+            />
+          </a>
+        </footer>
+      </section>
     </div>
   );
 };

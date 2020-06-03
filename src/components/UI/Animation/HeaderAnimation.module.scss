@@ -1,4 +1,11 @@
-.animation_text {
-    font-size: 1rem;
-    font-size: 1.5rem;
+.text_container {
+    position: relative;
+    .animation_text {
+        font-size: 1.25rem;
+        letter-spacing: 0.2px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #003042;
+    }
 }

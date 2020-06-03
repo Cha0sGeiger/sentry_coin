@@ -18,9 +18,11 @@ class HeaderAnimation extends Component {
     return (
       <div>
         <Lottie options={defaultOptions} height={250} width={250} />
-        <h2 className={classes.animation_text}>
-          Connecting your personal data with every service
-        </h2>
+        <div className={classes.text_container}>
+          <p className={classes.animation_text}>
+            Connecting your personal data with every service
+          </p>
+        </div>
       </div>
     );
   }
