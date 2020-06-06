@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classes from './Dashboard.module.scss';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Logo,
   CloseIcon,
@@ -24,9 +25,16 @@ export const Dashboard = () => {
             <HeaderAnimation />
           </div>
           <div className={classes.menu_container}>
-            <div className={classes.logo_container}>
+            <motion.div
+              className={classes.logo_container}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{
+                scale: 1.2,
+                borderRadius: '100%',
+              }}
+            >
               <Logo alt="logo" />
-            </div>
+            </motion.div>
             <div className={classes.hamburger_menu_container}>
               {isOpen ? (
                 <CloseIcon
