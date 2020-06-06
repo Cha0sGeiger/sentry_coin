@@ -1,0 +1,41 @@
+.page {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    .coin_container {
+        display: block;
+        width: 300px;
+        height: 120px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 0 rgba(190, 190, 190, 0.5);
+        background-color: #ffffff;
+        margin: 10px 0;
+        .id_wrapper {
+            display: flex;
+            justify-content: space-evenly;
+            div{
+                font-size: 1.25rem;
+                font-weight: 500;
+                letter-spacing: 0.14px;
+            }
+        }
+        .button_wrapper {
+            display: flex;
+            justify-content: center;
+            .button {
+                margin-top: 40px;
+                width: 89px;
+                height: 33px;
+                border-radius: 5px;
+                font-size: 1rem;
+                font-weight: 500;
+                letter-spacing: 0.2px;
+                text-align: center;
+                color: #ffffff;
+                outline: none;
+                background-color: darkcyan;
+            }
+        }
+    }
+}

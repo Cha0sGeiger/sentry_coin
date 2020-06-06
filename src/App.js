@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-import { Header } from "./components/UI/Menu";
-import { Dashboard } from "../src/components/routes/Dashboard";
+import AppRouter from "./AppRouter";
 
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      <AppRouter />
     </div>
   );
 }

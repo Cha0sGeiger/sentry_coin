@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Menu.module.scss";
+import { Link } from "react-router-dom";
 
 export const Menu = (props) => {
   const animation = () => {
@@ -14,7 +15,9 @@ export const Menu = (props) => {
     <div className={classes.page}>
       <div className={classes.header}>
         <div className={classes.header_links_container}>
-          <span>Home</span>
+          <Link to="/tracker">
+            <span>Home</span>
+          </Link>
           <span>About</span>
           <span>ICO</span>
           <span>Development</span>
