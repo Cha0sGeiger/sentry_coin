@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 import classes from './Dashboard.module.scss';
 import { motion } from 'framer-motion';
-import {
-  Logo,
-  CloseIcon,
-  MenuIcon,
-  IconFlexible,
-  IconScalable,
-  IconUser_Friendly,
-  ArrowUpIcon,
-} from '../../UI/Icon/index';
+import { Logo, IconFlexible, IconScalable, IconUserFriendly, ArrowUpIcon } from '../../UI/Icon/index';
 
 import { Menu } from '../../UI/Menu/Menu';
 import HeaderAnimation from '../../UI/Animation/HeaderAnimation';
@@ -85,7 +77,7 @@ const Dashboard = ({ history }) => {
               <div className={classes.icon_list_item}>
                 <div className={classes.icon_list_item_content}>
                   <div className={classes.icon_mix}>
-                    <IconUser_Friendly className={classes.icon} />
+                    <IconUserFriendly className={classes.icon} />
                   </div>
                   <h4>User-Friendly</h4>
                   <p>Developer and consumer-friendly design built for practical real-world use cases</p>
@@ -166,19 +158,19 @@ const Dashboard = ({ history }) => {
               <div>
                 <h4>Communication</h4>
               </div>
-              <a>Contact</a>
-              <a>FAQ</a>
-              <a>Developers</a>
-              <a>Careers</a>
+              <a href="#contact">Contact</a>
+              <a href="#kiki">FAQ</a>
+              <a href="#kiki">Developers</a>
+              <a href="#kiki">Careers</a>
             </div>
             <div className={classes.links_container}>
               <div>
                 <h4>Company</h4>
               </div>
-              <a>Contact</a>
-              <a>FAQ</a>
-              <a>Developers</a>
-              <a>Careers</a>
+              <a href="#kiki">Contact</a>
+              <a href="#kiki">FAQ</a>
+              <a href="#kiki"> Developers</a>
+              <a href="#kiki">Careers</a>
             </div>
           </div>
           <a href="#header" className={classes.footer_link}>
