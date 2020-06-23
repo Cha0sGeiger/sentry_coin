@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { withRouter, Link } from 'react-router-dom';
 import classes from './Dashboard.module.scss';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   Logo,
   CloseIcon,
@@ -13,12 +14,24 @@ import {
 
 import { Menu } from '../../UI/Menu/Menu';
 import HeaderAnimation from '../../UI/Animation/HeaderAnimation';
+import ModalContact from '../../UI/Modal/ModalContact';
 
-export const Dashboard = () => {
-  const [isOpen, setMenuOpen] = useState(false);
+const Dashboard = ({ history }) => {
+  const [state, setState] = useState(false);
+  const [isShowingModal, setShowingModal] = useState(false);
+
+  const handleSendMessage = () => {
+    setShowingModal(!isShowingModal);
+  };
 
   return (
     <div className={classes.max_page_width}>
+      <ModalContact
+        className={classes.modal}
+        open={isShowingModal}
+        onClose={() => setShowingModal(!isShowingModal)}
+        message={`Your message has been sent. We will get back to you as soon as possible. Thank you!`}
+      />
       <section id="header" className={classes.header}>
         <div className={classes.page}>
           <div className={classes.animation_hero}>
@@ -36,28 +49,14 @@ export const Dashboard = () => {
               <Logo alt="logo" />
             </motion.div>
             <div className={classes.hamburger_menu_container}>
-              {isOpen ? (
-                <CloseIcon
-                  height="32px"
-                  width="32px"
-                  onClick={() => {
-                    setMenuOpen(!isOpen);
-                  }}
-                  className={classes.menu_icon}
-                />
-              ) : (
-                <MenuIcon
-                  height="32px"
-                  width="32px"
-                  onClick={() => {
-                    setMenuOpen(!isOpen);
-                  }}
-                  className={classes.menu_icon}
-                />
-              )}
+              <div class={`icon-three${state ? ' active-three' : ''}`} onClick={() => setState(!state)}>
+                <div class="hamburger hamburger-three"></div>
+              </div>
+
+              {/* <MenuIcon height="32px" width="32px" onClick={handleMenu} className={classes.menu_icon} /> */}
             </div>
           </div>
-          {isOpen ? <Menu /> : null}
+          {state ? <Menu state={state} /> : null}
         </div>
       </section>
       <section className={classes.section_front_panel}>
@@ -151,7 +150,9 @@ export const Dashboard = () => {
             <div className={classes.newsletter_container}>
               <h1>Newsletter</h1>
               <p>Sign up for new updates from Sentry Network here :</p>
-              <button className={classes.newsletter_button}>Sign up</button>
+              <button className={classes.newsletter_button} onClick={handleSendMessage}>
+                Sign up
+              </button>
             </div>
             <div className={classes.footer_separator}>
               <div>
@@ -191,3 +192,5 @@ export const Dashboard = () => {
     </div>
   );
 };
+
+export default withRouter(Dashboard);

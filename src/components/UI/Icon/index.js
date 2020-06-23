@@ -7,8 +7,6 @@ import iconScalable from '../../../media/icons/icon2.svg';
 import iconUser_Friendly from '../../../media/icons/icon3.svg';
 import arrowUpIcon from '../../../media/icons/up-arrows.svg';
 
-const staticUrl = process.env.REACT_APP_CDN_URL;
-
 const Icon = (props) => <img {...props} src={props.src} alt="" className={props.className} />;
 
 export const MenuIcon = (props) => <Icon {...props} src={menuIcon} />;

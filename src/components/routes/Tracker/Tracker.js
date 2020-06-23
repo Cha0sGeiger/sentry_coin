@@ -1,6 +1,6 @@
-import React, { useState, useEffect, Component } from "react";
-import { getCryptoPrice } from "../../../services/apiCoins";
-import classes from "./Tracker.module.scss";
+import React, { Component } from 'react';
+import { getCryptoPrice } from '../../../services/apiCoins';
+import classes from './Tracker.module.scss';
 
 class Tracker extends Component {
   constructor(props) {
@@ -12,17 +12,17 @@ class Tracker extends Component {
   }
 
   componentDidMount() {
-    console.log("drugo");
+    console.log('drugo');
     getCryptoPrice().then((data) => {
-      console.log(data.BTC.EUR, "data");
+      console.log(data.BTC.EUR, 'data');
       this.setState({
         crypto: data,
       });
     });
-    if (!localStorage.getItem("crypto")) {
+    if (!localStorage.getItem('crypto')) {
       // skini nove podatke
     } else {
-      console.log("Using data");
+      console.log('Using data');
     }
   }
 

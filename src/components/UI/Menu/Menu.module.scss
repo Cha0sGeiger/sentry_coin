@@ -1,5 +1,13 @@
 @import "../../../style/_variables.scss";
 
+$red: #f37272;
+$brown: #584e4a;
+$whitey: #f0f0f0;
+
+$duration: 0.2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
 .page {
     width: 500px;
     height: 320px;
@@ -16,32 +24,52 @@
             transform: scale(1);
         }
     }
+
     .header {
-        span {
-            font-size: 1.75rem;
-            margin: auto 0;
-        }
         .header_links_container {
             position: relative;
-            height: 400px;
+            height: 320px;
             display: flex;
-            flex-flow: column;
-            span {
-                margin: 22px auto 0 auto;
-                font-size: 1.5rem;
-                letter-spacing: 0.4px;
-                border: 10px solid transparent;
-                font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-            }
-            span:hover {
-                background: red;
-                padding: 9px;
-                border: 1px solid;
-                border-radius: 3px solid;
-                -webkit-box-shadow: -8px -2px 36px -1px rgba(0, 0, 0, 0.75);
-                -moz-box-shadow: -8px -2px 36px -1px rgba(0, 0, 0, 0.75);
-                box-shadow: -8px -2px 36px -1px rgba(0, 0, 0, 0.75);
-                cursor: pointer;
+            ul {
+                display: flex;
+                flex-flow: column;
+                justify-content: space-around;
+                margin: 0 auto;
+                padding: 0;
+                a {
+                    margin: 0 auto;
+                }
+                li {
+                    color: black;
+                    font-family: "Nunito Sans";
+                    font-size: 1.25rem;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    letter-spacing: 0.21em;
+                    display: inline-block;
+                    position: relative;
+                }
+                li:after {
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    position: absolute;
+                    background: darkcyan;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                }
+                li:hover:after {
+                    width: 100%;
+                    left: 0;
+                }
+                @media screen and (max-height: 300px) {
+                    ul {
+                        margin-top: 40px;
+                    }
+                }
             }
         }
     }
