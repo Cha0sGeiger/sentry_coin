@@ -92,8 +92,13 @@ const Dashboard = ({ history }) => {
           <h2>Latest news</h2>
           <div className={classes.articles}>
             <article className={classes.articles_one}>
-              <img src={'https://picsum.photos/150'} alt="article" />
-              <h4>Announcement</h4>
+              <img src={'https://picsum.photos/300/200'} alt="article" />
+              <div class="flex_start">
+                <h4>Announcement</h4>
+                <time datetime="2020-06-25T11:21:12-04:00" date="" className={classes.date_time}>
+                  Jun 25, 2020
+                </time>
+              </div>
               <p>
                 Occaecat non aute occaecat consequat quis laboris do mollit do nulla. Irure exercitation nostrud labore
                 nulla tempor enim culpa adipisicing labore sunt proident non aliquip veniam. Sunt exercitation mollit
@@ -105,8 +110,14 @@ const Dashboard = ({ history }) => {
               </p>
             </article>
             <article>
-              <img src={'https://picsum.photos//id/119/150'} alt="article" />
-              <h4>Announcement</h4>
+              <img src={'https://picsum.photos//id/119/300/200'} alt="article" />
+              <div class="flex_start">
+                <h4>Announcement</h4>
+                <time datetime="2020-06-25T11:21:12-04:00" date="" className={classes.date_time}>
+                  Jun 17, 2020
+                </time>
+              </div>
+
               <p>
                 Aute sunt proident tempor ut officia sit proident consequat nisi fugiat ad voluptate mollit sint.
                 Incididunt consequat veniam excepteur do adipisicing velit ex nulla aliqua sit tempor exercitation
@@ -116,8 +127,13 @@ const Dashboard = ({ history }) => {
               </p>
             </article>
             <article>
-              <img src={'https://picsum.photos/id/1049/150'} alt="article" />
-              <h4>Announcement</h4>
+              <img src={'https://picsum.photos/id/1049/300/200'} alt="article" />
+              <div class="flex_start">
+                <h4>Announcement</h4>
+                <time datetime="2020-06-25T11:21:12-04:00" date="" className={classes.date_time}>
+                  Jun 12, 2020
+                </time>
+              </div>
               <p>
                 Laborum adipisicing et excepteur irure esse laboris esse cillum proident quis. Veniam sint laborum qui
                 exercitation sunt elit consequat amet exercitation sunt. Laboris est enim occaecat aliqua laboris aute
@@ -126,8 +142,13 @@ const Dashboard = ({ history }) => {
               </p>
             </article>
             <article>
-              <img src={'https://picsum.photos/id/1029/150'} alt="article" />
-              <h4>Announcement</h4>
+              <img src={'https://picsum.photos/id/1029/300/200'} alt="article" />
+              <div class="flex_start">
+                <h4>Announcement</h4>
+                <time datetime="2020-06-25T11:21:12-04:00" date="" className={classes.date_time}>
+                  Jun 10, 2020
+                </time>
+              </div>
               <p>
                 Sit culpa elit esse anim. Sit elit et labore exercitation ea fugiat Lorem duis dolore. Cillum commodo
                 velit ut irure. Qui aliqua enim excepteur deserunt proident amet reprehenderit excepteur.
@@ -167,10 +188,10 @@ const Dashboard = ({ history }) => {
               <div>
                 <h4>Company</h4>
               </div>
-              <a href="#kiki">Contact</a>
-              <a href="#kiki">FAQ</a>
-              <a href="#kiki"> Developers</a>
-              <a href="#kiki">Careers</a>
+              <a href="#kiki">Sentry network</a>
+              <a href="#kiki">Block_POS</a>
+              <a href="#kiki">Network</a>
+              <a href="#kiki">Soros group</a>
             </div>
           </div>
           <a href="#header" className={classes.footer_link}>

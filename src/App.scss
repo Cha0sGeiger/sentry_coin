@@ -1,6 +1,6 @@
 .hamburger {
     top: 50%;
-    left: -10%;
+    left: -25%;
     width: 50px;
     height: 6px;
     background: #fcfcfc;
@@ -53,4 +53,10 @@
     top: 0;
     transform: rotate(225deg);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.flex_start {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }

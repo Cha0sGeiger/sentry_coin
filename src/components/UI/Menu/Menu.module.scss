@@ -11,9 +11,9 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 .page {
     width: 500px;
     height: 320px;
-    background: white;
+    background: rgba(149, 165, 166, 0.1);
     border-radius: 5px;
-    border: 1px solid #ffffff;
+    border: 1px solid #d5dce8 0.2;
     animation: createMenu 1.25s;
 
     @keyframes createMenu {
