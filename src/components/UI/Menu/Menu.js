@@ -8,7 +8,7 @@ export const Menu = ({ state }) => {
       <div className={classes.header}>
         <div className={classes.header_links_container}>
           <ul>
-            <Link to="/tracker">
+            <Link to="/about-us">
               <li>About us</li>
             </Link>
             <Link to="/tracker">

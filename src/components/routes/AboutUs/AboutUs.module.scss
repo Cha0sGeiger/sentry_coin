@@ -1,0 +1,40 @@
+.section_content {
+    .icon_container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .about_icon {
+            width: 600px;
+        }
+    }
+
+    background: #e6e9ed;
+    position: relative;
+    padding-top: 30px;
+    .page_text {
+        padding-bottom: 120px;
+        width: 1200px;
+        margin: auto auto;
+        h4 {
+            font-family: "Mada";
+            font-size: 1.75rem;
+            margin-left: 70px;
+            color: #003042;
+        }
+
+        p {
+            font-family: "Imprima";
+            font-size: 1.2rem;
+            padding-top: 24px;
+            margin-left: 73px;
+            color: #003042;
+            letter-spacing: 0.22px;
+            
+        }
+        p::first-letter {
+            text-transform: uppercase;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    }
+}
